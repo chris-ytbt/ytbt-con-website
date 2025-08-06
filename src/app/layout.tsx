@@ -10,12 +10,12 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Yottabyte Pte. Ltd. - Business Process Consulting",
+  title: "Yottabyte - Business Process Consulting",
   description: "Expert business process consulting to optimize workflows, reduce inefficiencies, and drive sustainable growth for your organization.",
   keywords: ["business process consulting", "workflow optimization", "process automation", "change management"],
-  authors: [{ name: "Yottabyte Pte. Ltd." }],
+  authors: [{ name: "Yottabyte" }],
   openGraph: {
-    title: "Yottabyte Pte. Ltd. - Business Process Consulting",
+    title: "Yottabyte - Business Process Consulting",
     description: "Expert business process consulting to optimize workflows, reduce inefficiencies, and drive sustainable growth.",
     type: "website",
     locale: "en_US",

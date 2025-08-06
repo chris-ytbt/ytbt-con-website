@@ -21,7 +21,7 @@ export default function Header() {
         <div className="flex w-full items-center justify-between py-4">
           <div className="flex items-center">
             <Link href="/" className="text-xl font-bold text-navy-500 hover:text-navy-600">
-              Yottabyte Pte. Ltd.
+              Yottabyte
             </Link>
           </div>
           

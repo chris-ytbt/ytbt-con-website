@@ -3,8 +3,8 @@ import PortfolioCard from '@/components/portfolio/PortfolioCard'
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Portfolio - Yottabyte Pte. Ltd.',
-  description: 'Explore our successful business process consulting projects and case studies. See how we\'ve helped organizations optimize workflows and drive efficiency.',
+  title: 'Portfolio',
+  description: 'Previous projects and case studies.',
 }
 
 export default function PortfolioPage() {
@@ -20,8 +20,7 @@ export default function PortfolioPage() {
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
             Discover how we&apos;ve helped organizations transform their business processes, 
-            reduce inefficiencies, and achieve measurable results through strategic consulting 
-            and innovative solutions.
+            reduce inefficiencies, and achieve their goals.
           </p>
         </div>
 
@@ -29,21 +28,21 @@ export default function PortfolioPage() {
         {posts.length > 0 ? (
           <>
             {/* Featured Posts */}
-            <div className="mb-16">
-              <h2 className="text-2xl font-bold text-gray-900 mb-8">Featured Case Studies</h2>
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
-                {posts
-                  .filter(post => post.featured)
-                  .slice(0, 2)
-                  .map((post) => (
-                    <PortfolioCard key={post.slug} post={post} />
-                  ))}
-              </div>
-            </div>
+            {/*<div className="mb-16">*/}
+            {/*  <h2 className="text-2xl font-bold text-gray-900 mb-8">Featured Case Studies</h2>*/}
+            {/*  <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">*/}
+            {/*    {posts*/}
+            {/*      .filter(post => post.featured)*/}
+            {/*      .slice(0, 2)*/}
+            {/*      .map((post) => (*/}
+            {/*        <PortfolioCard key={post.slug} post={post} />*/}
+            {/*      ))}*/}
+            {/*  </div>*/}
+            {/*</div>*/}
 
             {/* All Posts */}
             <div>
-              <h2 className="text-2xl font-bold text-gray-900 mb-8">All Case Studies</h2>
+              <h2 className="text-2xl font-bold text-gray-900 mb-8">Case Studies</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {posts.map((post) => (
                   <PortfolioCard key={post.slug} post={post} />

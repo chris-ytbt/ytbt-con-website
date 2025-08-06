@@ -31,7 +31,7 @@ export async function generateMetadata({ params }: PortfolioPostPageProps): Prom
   }
 
   return {
-    title: `${post.title} - Portfolio - Yottabyte Pte. Ltd.`,
+    title: `${post.title} - Portfolio`,
     description: post.excerpt,
     openGraph: {
       title: post.title,

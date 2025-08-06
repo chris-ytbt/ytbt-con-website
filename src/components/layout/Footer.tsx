@@ -9,7 +9,7 @@ export default function Footer() {
             {/* Company Info */}
             <div className="col-span-1 md:col-span-2">
               <h3 className="text-lg font-bold text-white mb-4">
-                Yottabyte Pte. Ltd.
+                Yottabyte
               </h3>
               <p className="text-gray-300 mb-4 max-w-md">
                 Expert business process consulting to optimize workflows, 
@@ -41,12 +41,12 @@ export default function Footer() {
                 >
                   Contact
                 </Link>
-                <Link 
-                  href="/privacy" 
-                  className="block text-gray-300 hover:text-white transition-colors"
-                >
-                  Privacy Policy
-                </Link>
+                {/*<Link */}
+                {/*  href="/privacy" */}
+                {/*  className="block text-gray-300 hover:text-white transition-colors"*/}
+                {/*>*/}
+                {/*  Privacy Policy*/}
+                {/*</Link>*/}
               </div>
             </div>
           </div>
@@ -57,9 +57,9 @@ export default function Footer() {
               <p className="text-gray-400 text-sm">
                 © {new Date().getFullYear()} Yottabyte Pte. Ltd. All rights reserved.
               </p>
-              <p className="text-gray-400 text-sm mt-2 md:mt-0">
-                Built with Next.js and Tailwind CSS
-              </p>
+              {/*<p className="text-gray-400 text-sm mt-2 md:mt-0">*/}
+              {/*  Built with Next.js and Tailwind CSS*/}
+              {/*</p>*/}
             </div>
           </div>
         </div>
