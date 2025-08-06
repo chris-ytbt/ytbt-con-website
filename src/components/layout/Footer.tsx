@@ -41,6 +41,7 @@ export default function Footer() {
                 >
                   Contact
                 </Link>
+								{/*PRIVACY: TODO*/}
                 {/*<Link */}
                 {/*  href="/privacy" */}
                 {/*  className="block text-gray-300 hover:text-white transition-colors"*/}

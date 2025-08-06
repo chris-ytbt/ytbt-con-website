@@ -153,7 +153,7 @@ export default async function PortfolioPostPage({ params }: PortfolioPostPagePro
             <Button href="/contact" size="lg">
               Start Your Project
             </Button>
-            <Button href="/portfolio" variant="outline" size="lg">
+            <Button href="/portfolio" variant="outline-dark" size="lg">
               View More Case Studies
             </Button>
           </div>

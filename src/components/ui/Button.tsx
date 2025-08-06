@@ -4,7 +4,7 @@ import { cn } from '@/lib/utils'
 
 interface ButtonProps {
   children: ReactNode
-  variant?: 'primary' | 'secondary' | 'outline'
+  variant?: 'primary' | 'secondary' | 'outline' | 'outline-dark'
   size?: 'sm' | 'md' | 'lg'
   href?: string
   onClick?: () => void
@@ -28,7 +28,8 @@ export default function Button({
   const variants = {
     primary: "bg-navy-600 text-white hover:bg-navy-700 focus:ring-navy-500",
     secondary: "bg-blue-500 text-white hover:bg-blue-600 focus:ring-blue-500",
-    outline: "border border-white text-white hover:bg-white hover:text-navy-700 focus:ring-white"
+    outline: "border border-white text-white hover:bg-white hover:text-navy-700 focus:ring-white",
+    "outline-dark": "border border-navy-600 text-navy-600 bg-white hover:bg-navy-600 hover:text-white focus:ring-navy-500"
   }
   
   const sizes = {

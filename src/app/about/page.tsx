@@ -1,6 +1,7 @@
 import {Award, Users, Target, TrendingUp} from 'lucide-react'
 import {Metadata} from 'next'
 import Link from 'next/link'
+import Image from 'next/image'
 
 export const metadata: Metadata = {
 	title: 'About Us',
@@ -32,9 +33,15 @@ export default function AboutPage() {
 								{/* CEO Profile */}
 								<div className="bg-white border border-gray-200 rounded-lg p-8">
 									<div className="flex items-center mb-6">
-										<div
-												className="w-20 h-20 bg-navy-100 rounded-full flex items-center justify-center mr-6">
-											<span className="text-2xl font-bold text-navy-600">YB</span>
+										<div className="w-20 h-20 mr-6 relative">
+											<Image
+												src="/profile.jpg"
+												alt="Christoph - Partner at Yottabyte"
+												width={80}
+												height={80}
+												className="rounded-full object-cover"
+												priority
+											/>
 										</div>
 										<div>
 											<h3 className="text-xl font-bold text-gray-900">Partner</h3>
@@ -49,21 +56,21 @@ export default function AboutPage() {
 										measurable improvements in efficiency and performance.
 									</p>
 
-									{/* Key Achievements */}
-									<div className="space-y-3">
-										<div className="flex items-center">
-											<Award className="w-5 h-5 text-navy-500 mr-3 flex-shrink-0"/>
-											<span className="text-gray-600">Certified Lean Six Sigma Black Belt</span>
-										</div>
-										<div className="flex items-center">
-											<Award className="w-5 h-5 text-navy-500 mr-3 flex-shrink-0"/>
-											<span className="text-gray-600">PMP Certified Project Manager</span>
-										</div>
-										<div className="flex items-center">
-											<Award className="w-5 h-5 text-navy-500 mr-3 flex-shrink-0"/>
-											<span className="text-gray-600">MBA in Operations Management</span>
-										</div>
-									</div>
+									{/* Key Achievements: TODO */}
+								{/*	<div className="space-y-3">*/}
+								{/*		<div className="flex items-center">*/}
+								{/*			<Award className="w-5 h-5 text-navy-500 mr-3 flex-shrink-0"/>*/}
+								{/*			<span className="text-gray-600">Certified Lean Six Sigma Black Belt</span>*/}
+								{/*		</div>*/}
+								{/*		<div className="flex items-center">*/}
+								{/*			<Award className="w-5 h-5 text-navy-500 mr-3 flex-shrink-0"/>*/}
+								{/*			<span className="text-gray-600">PMP Certified Project Manager</span>*/}
+								{/*		</div>*/}
+								{/*		<div className="flex items-center">*/}
+								{/*			<Award className="w-5 h-5 text-navy-500 mr-3 flex-shrink-0"/>*/}
+								{/*			<span className="text-gray-600">MBA in Operations Management</span>*/}
+								{/*		</div>*/}
+								{/*	</div>*/}
 								</div>
 							</div>
 
@@ -186,34 +193,34 @@ export default function AboutPage() {
 						</div>
 					</section>
 
-					{/* Company Stats */}
-					<section className="bg-navy-50 rounded-lg p-12 mb-20">
-						<div className="text-center mb-12">
-							<h2 className="text-3xl font-bold text-gray-900 mb-4">Our Impact</h2>
-							<p className="text-lg text-gray-600 max-w-2xl mx-auto">
-								Numbers that reflect our commitment to delivering measurable results for our clients.
-							</p>
-						</div>
+					{/* Company Stats: TODO */}
+					{/*<section className="bg-navy-50 rounded-lg p-12 mb-20">*/}
+					{/*	<div className="text-center mb-12">*/}
+					{/*		<h2 className="text-3xl font-bold text-gray-900 mb-4">Our Impact</h2>*/}
+					{/*		<p className="text-lg text-gray-600 max-w-2xl mx-auto">*/}
+					{/*			Numbers that reflect our commitment to delivering measurable results for our clients.*/}
+					{/*		</p>*/}
+					{/*	</div>*/}
 
-						<div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
-							<div>
-								<div className="text-4xl font-bold text-navy-600 mb-2">50+</div>
-								<p className="text-gray-600">Successful Projects</p>
-							</div>
-							<div>
-								<div className="text-4xl font-bold text-navy-600 mb-2">30+</div>
-								<p className="text-gray-600">Enterprise Clients</p>
-							</div>
-							<div>
-								<div className="text-4xl font-bold text-navy-600 mb-2">$15M+</div>
-								<p className="text-gray-600">Client Cost Savings</p>
-							</div>
-							<div>
-								<div className="text-4xl font-bold text-navy-600 mb-2">99%</div>
-								<p className="text-gray-600">Client Satisfaction</p>
-							</div>
-						</div>
-					</section>
+					{/*	<div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">*/}
+					{/*		<div>*/}
+					{/*			<div className="text-4xl font-bold text-navy-600 mb-2">50+</div>*/}
+					{/*			<p className="text-gray-600">Successful Projects</p>*/}
+					{/*		</div>*/}
+					{/*		<div>*/}
+					{/*			<div className="text-4xl font-bold text-navy-600 mb-2">30+</div>*/}
+					{/*			<p className="text-gray-600">Enterprise Clients</p>*/}
+					{/*		</div>*/}
+					{/*		<div>*/}
+					{/*			<div className="text-4xl font-bold text-navy-600 mb-2">$15M+</div>*/}
+					{/*			<p className="text-gray-600">Client Cost Savings</p>*/}
+					{/*		</div>*/}
+					{/*		<div>*/}
+					{/*			<div className="text-4xl font-bold text-navy-600 mb-2">99%</div>*/}
+					{/*			<p className="text-gray-600">Client Satisfaction</p>*/}
+					{/*		</div>*/}
+					{/*	</div>*/}
+					{/*</section>*/}
 
 					{/* Call to Action */}
 					<section className="text-center">

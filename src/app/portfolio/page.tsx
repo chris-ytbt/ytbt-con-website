@@ -27,7 +27,7 @@ export default function PortfolioPage() {
         {/* Portfolio Grid */}
         {posts.length > 0 ? (
           <>
-            {/* Featured Posts */}
+            {/* Featured Posts: TODO */}
             {/*<div className="mb-16">*/}
             {/*  <h2 className="text-2xl font-bold text-gray-900 mb-8">Featured Case Studies</h2>*/}
             {/*  <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">*/}

@@ -43,6 +43,7 @@ export default function ContactPage() {
 									</div>
 								</div>
 
+								{/*PHONE NUMBER: TODO*/}
 								{/*<div className="flex items-start">*/}
 								{/*  <div className="flex-shrink-0">*/}
 								{/*    <div className="flex items-center justify-center w-12 h-12 bg-navy-100 rounded-lg">*/}
@@ -56,6 +57,7 @@ export default function ContactPage() {
 								{/*  </div>*/}
 								{/*</div>*/}
 
+								{/*ADDRESS: TODO*/}
 								{/*<div className="flex items-start">*/}
 								{/*  <div className="flex-shrink-0">*/}
 								{/*    <div className="flex items-center justify-center w-12 h-12 bg-navy-100 rounded-lg">*/}
@@ -69,6 +71,7 @@ export default function ContactPage() {
 								{/*  </div>*/}
 								{/*</div>*/}
 
+								{/*RESPONSE TIME: TODO*/}
 								{/*  <div className="flex items-start">*/}
 								{/*    <div className="flex-shrink-0">*/}
 								{/*      <div className="flex items-center justify-center w-12 h-12 bg-navy-100 rounded-lg">*/}
