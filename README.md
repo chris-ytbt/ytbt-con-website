@@ -21,7 +21,9 @@ featured: false
 
 Write the article body below the frontmatter using Markdown or static MDX markup.
 Do not include a page header, title, navigation, or site footer; the shared template
-renders these. Only commit trusted, reviewed MDX, since MDX can execute code.
+renders these. Only commit trusted, reviewed MDX. The renderer uses
+`next-mdx-remote` 6 with its default JavaScript-expression blocking enabled;
+use static markup rather than executable expressions in article content.
 
 The `type` selects `/blog/<slug>` or `/portfolio/<slug>`. Lists are sorted by
 publication date, newest first, and previous/next links stay within that section.
