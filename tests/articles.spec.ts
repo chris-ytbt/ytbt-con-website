@@ -30,7 +30,9 @@ test('Blog preserves the complete rich article without duplicate page chrome', a
   await expect(page.locator('main > article > div > header time')).toHaveText('2026-10-25')
   await expect(page.locator('.article-content .quadrant')).toHaveCount(4)
   await expect(page.locator('.article-content .response-table tbody tr')).toHaveCount(4)
-  await expect(page.locator('.article-content #references li')).toHaveCount(10)
+  await expect(page.locator('.article-content #references li')).toHaveCount(11)
+  await expect(page.locator('.article-content')).toContainText('A completed experiment can validly conclude that no candidate beat the baseline.')
+  await expect(page.locator('.article-content #ref-11 a')).toHaveAttribute('href', 'https://deepmind.google/blog/alphaevolve-a-gemini-powered-coding-agent-for-designing-advanced-algorithms/')
   await expect(page.locator('.article-content')).toContainText('Organizational productivity depends on what people can reliably finish, understand and use together.')
   await expect(page.locator('.article-content')).not.toContainText('AI ADOPTION')
   await expect(page.locator('.article-content')).not.toContainText('WORK WITH YOTTABYTE')
@@ -96,7 +98,7 @@ test('Mobile navigation and article layouts remain usable at 390px', async ({ pa
   await page.locator('.article-content figure').screenshot({ path: testInfo.outputPath('blog-framework-mobile.png'), style: 'body > header { visibility: hidden; }' })
 })
 
-test('Framework axes stay between the correct quadrants and discussion icons locate A and C', async ({ page }, testInfo) => {
+test('Framework axes stay between the correct quadrants and discussion icons locate A through D', async ({ page }, testInfo) => {
   for (const width of [1280, 390]) {
     await page.setViewportSize({ width, height: 900 })
     await page.goto(`/blog/${blogSlug}`)
@@ -136,13 +138,13 @@ test('Framework axes stay between the correct quadrants and discussion icons loc
       expect(box!.x + box!.width).toBeLessThan(a.left)
     }
     await expect(figure).not.toContainText('Yottabyte framework. Rows move')
-    for (const [quadrant, expectedX] of [['A', '2'], ['C', '13']]) {
-      const heading = page.getByRole('heading', { name: new RegExp(`^Quadrant ${quadrant} in practice:`) })
+    for (const [quadrant, expectedX, expectedY] of [['A', '2', '2'], ['B', '2', '13'], ['C', '13', '2'], ['D', '13', '13']]) {
+      const heading = page.getByRole('heading', { name: new RegExp(`^${quadrant}:`) })
       const highlighted = heading.locator('svg rect[fill="#1e40af"]')
       await expect(heading.locator('svg rect')).toHaveCount(4)
       await expect(highlighted).toHaveCount(1)
       await expect(highlighted).toHaveAttribute('x', expectedX)
-      await expect(highlighted).toHaveAttribute('y', '2')
+      await expect(highlighted).toHaveAttribute('y', expectedY)
     }
     expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)).toBeTruthy()
     await page.locator('.quadrant-discussion-title').first().screenshot({ path: testInfo.outputPath(`quadrant-tracker-${width}.png`), style: 'body > header { visibility: hidden; }' })

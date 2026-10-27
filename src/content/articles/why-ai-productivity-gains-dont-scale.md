@@ -51,12 +51,12 @@ featured: false
   <p>This changes the management response. Repeated low-quality handoffs should prompt questions about workload, guidance and responsibility for quality. Shaming AI use makes it harder to discuss how an output was produced or what remains unchecked.</p>
 
   <h3 id="work-intensification">3. Work intensification: capability grows faster than sustainable capacity</h3>
-  <p>Berkeley researchers Aruna Ranganathan and Xingqi Maggie Ye studied one roughly 200-person U.S. technology company through eight months of observation and more than 40 interviews. Their work, presented in HBR and a university research interview in February 2026, identified three patterns: employees took on broader tasks, work entered former breaks and evenings, and multiple AI-supported threads ran simultaneously. <a className="source-link" href="https://hbr.org/2026/02/ai-doesnt-reduce-work-it-intensifies-it">[7: HBR article]</a> <a className="source-link" href="https://newsroom.haas.berkeley.edu/ai-promised-to-free-up-workers-time-uc-berkeley-haas-researchers-found-the-opposite/">[8: Researcher interview]</a></p>
+  <p>Berkeley researchers Aruna Ranganathan and Xingqi Maggie Ye studied one roughly 200-person U.S. technology company from April to December 2025. They observed work in person twice a week, followed internal communications and conducted more than 40 interviews. Their February 2026 HBR article identifies three patterns: broader task scope, work entering former breaks and evenings, and more simultaneous AI-supported threads. AI use was voluntary. <a className="source-link" href="https://www.physicianleaders.org/pages/articles/ai-doesnt-reduce-work-it-intensifies-it">[7: HBR article, authorized reprint]</a></p>
   <blockquote>
     <p>“what was once extra effort becomes standard performance.”</p>
     <footer>Xingqi Maggie Ye, <cite><a href="https://newsroom.haas.berkeley.edu/ai-promised-to-free-up-workers-time-uc-berkeley-haas-researchers-found-the-opposite/">UC Berkeley Haas research interview</a></cite></footer>
   </blockquote>
-  <p>People could feel momentum and expanded capability in individual sessions while feeling more stretched across the workday. This single-company, ongoing study does not establish a universal burnout effect. It does reveal a plausible management trap: newly possible work becomes an expectation before anyone decides whether it deserves the attention.</p>
+  <p>The burden was concrete: engineers absorbed informal review, coaching and completion of colleagues’ partial AI-assisted work. Workers reported less recovery during downtime and more attention switching. Expanded capability and fatigue could coexist. These observations support concern about workload creep; they do not quantify a net organizational productivity loss or establish that AI caused higher burnout or turnover. <a className="source-link" href="https://www.physicianleaders.org/pages/articles/ai-doesnt-reduce-work-it-intensifies-it">[7]</a> <a className="source-link" href="https://newsroom.haas.berkeley.edu/ai-promised-to-free-up-workers-time-uc-berkeley-haas-researchers-found-the-opposite/">[8: Researcher interview]</a></p>
   <p>Our practical implication is to separate capability from commitment. A team needs an explicit choice about which additional work to take on, which to defer and where to preserve recovery. Finishing an automated task should not silently create an obligation to start another.</p>
 </section>
 
@@ -94,31 +94,31 @@ featured: false
       <span className="framework-axis framework-axis-y" aria-hidden="true" />
       <section className="quadrant bg-blue-50/70" aria-labelledby="quadrant-a">
         <p className="quadrant-axis">More structured · Easy to measure</p>
-        <h3 id="quadrant-a"><span className="quadrant-letter">A</span> Automate reliably</h3>
-        <p>Known steps with testable results.</p>
-        <p className="quadrant-example">Testable code changes, dashboard refreshes, structured data cleanup.</p>
-        <p className="quadrant-action">Define rules and checks; automate within them.</p>
+        <h3 id="quadrant-a"><span className="quadrant-letter">A</span> Build and run automation</h3>
+        <p>Known steps with clear acceptance checks.</p>
+        <p className="quadrant-example">Defined KPI refreshes, status trackers, rule-based data cleanup.</p>
+        <p className="quadrant-action">Use AI to build the tool or perform bounded steps within it.</p>
       </section>
       <section className="quadrant" aria-labelledby="quadrant-c">
         <p className="quadrant-axis">More structured · Hard to measure</p>
-        <h3 id="quadrant-c"><span className="quadrant-letter">C</span> Apply with controls</h3>
-        <p>A repeatable process with quality that requires judgment or later outcomes.</p>
+        <h3 id="quadrant-c"><span className="quadrant-letter">C</span> Draft with evidence</h3>
+        <p>A familiar process whose output requires contextual judgment.</p>
         <p className="quadrant-example">Hiring interviews, peer feedback, performance reviews.</p>
-        <p className="quadrant-action">Require evidence; people own the decision.</p>
+        <p className="quadrant-action">Check substance before use or sharing; people own the judgment.</p>
       </section>
       <section className="quadrant bg-blue-50/70" aria-labelledby="quadrant-b">
         <p className="quadrant-axis">Less structured · Easy to measure</p>
-        <h3 id="quadrant-b"><span className="quadrant-letter">B</span> Explore and test</h3>
-        <p>A new method with clear performance criteria.</p>
+        <h3 id="quadrant-b"><span className="quadrant-letter">B</span> Search and improve</h3>
+        <p>The best method is unknown, but results can be evaluated clearly.</p>
         <p className="quadrant-example">New algorithms, analytical methods, forecast models.</p>
-        <p className="quadrant-action">Compare against a baseline, then stop at the agreed threshold.</p>
+        <p className="quadrant-action">Propose, test and improve within a defined evaluation budget.</p>
       </section>
       <section className="quadrant" aria-labelledby="quadrant-d">
         <p className="quadrant-axis">Less structured · Hard to measure</p>
-        <h3 id="quadrant-d"><span className="quadrant-letter">D</span> Experiment cautiously</h3>
+        <h3 id="quadrant-d"><span className="quadrant-letter">D</span> Frame and explore</h3>
         <p>Open-ended work with ambiguous success criteria.</p>
         <p className="quadrant-example">New product concepts, new process design, unfamiliar-market strategy.</p>
-        <p className="quadrant-action">Keep scope small; retain contextual judgment.</p>
+        <p className="quadrant-action">Develop approaches, alternatives and test plans; treat them as hypotheses.</p>
       </section>
     </div>
     </div>
@@ -129,16 +129,25 @@ featured: false
 
   <div className="article-section">
     <p>Use the framework for a specific workflow or step. A single job may span several quadrants. Generating a candidate-screening summary, judging the evidence and making a hiring decision can require different controls.</p>
-    <p>Novelty alone does not make AI unsuitable. A new forecasting approach can be tested against held-out data, making it a good candidate for quadrant B. Conversely, a recurring performance review can remain hard to evaluate despite a familiar template. Repetition does not remove the need for judgment.</p>
-
-    <h3 className="quadrant-discussion-title"><QuadrantTracker quadrant="A" /><span>Quadrant A in practice: Stripe Minions</span></h3>
+    <p>The quadrants suggest different roles for AI. They do not establish a ranking of AI’s intrinsic output quality or measured workslop rates. In particular, quadrant D can produce valuable thinking even when a finished recommendation would be premature.</p>
+    <h3 className="quadrant-discussion-title"><QuadrantTracker quadrant="A" /><span>A: Use AI to build automation or operate within it</span></h3>
+    <p>In quadrant A, the method and acceptance checks are known. AI can help build a dashboard or Slack bot; the resulting tool can then run ordinary code. AI can also handle variable inputs during operation, provided the workflow has appropriate checks. Fixed calculations and rules may be better implemented directly in code. The choice depends on reliability, maintenance and total cost.</p>
+    <p>For example, refreshing agreed funnel metrics and flagging values against predefined thresholds belongs here. Inventing a useful anomaly signal is a different task. High volume can strengthen the automation business case, but AI-assisted tool building can also make smaller projects economical.</p>
     <p>In February 2026, Stripe reported more than 1,000 merged pull requests per week whose code was entirely produced by its Minions agents, with human review. The workflow connects Slack requests to repository context, isolated development environments, automated linting and tests, and reviewable pull requests. Stripe also caps the automated CI loop at two rounds. <a className="source-link" href="https://stripe.dev/blog/minions-stripes-one-shot-end-to-end-coding-agents">[9: Stripe engineering report]</a></p>
-    <p>This is a company-reported operating result, not a causal estimate of organization-wide productivity. Its useful design feature is concrete: context and checks are part of the workflow, and iteration has a limit. That is why we place this use in quadrant A.</p>
-
-    <h3 className="quadrant-discussion-title"><QuadrantTracker quadrant="C" /><span>Quadrant C in practice: AI interviews, human hiring decisions</span></h3>
+    <p>This is a company-reported result, not a causal estimate of organization-wide productivity. We place the bounded implementation workflow in A: clear requests are supported by context, checks and a limit on iteration.</p>
+    <h3 className="quadrant-discussion-title"><QuadrantTracker quadrant="B" /><span>B: Search for a method, then test and improve it</span></h3>
+    <p>In quadrant B, we can judge a result without already knowing how to produce it. AI can propose candidate approaches, implement them, compare results and revise the promising ones. The search can follow an organized experimental process even when the best solution is unknown.</p>
+    <p>For an expert-pool operation, illustrative tasks include comparing funnel forecasts on held-out completion data or designing quality flags against labeled cases. A useful flag must identify real problems at an acceptable false-alarm rate. Merely inventing a plausible metric does not satisfy that criterion.</p>
+    <p>Define the objective, baseline, evaluation data and constraints first. Then give the search a time or attempt budget and a stopping condition. Keep final evaluation data separate from repeated tuning where possible; otherwise, apparent improvement may simply reflect fitting the test. A completed experiment can validly conclude that no candidate beat the baseline.</p>
+    <p>Google DeepMind’s May 2025 account of AlphaEvolve illustrates this pattern: language models propose programs, automated evaluators verify and score them, and an evolutionary search develops promising candidates. The relevant lesson is the connection between generation and dependable evaluation. It is a developer’s technical report, rather than evidence that every business task will benefit similarly. <a className="source-link" href="https://deepmind.google/blog/alphaevolve-a-gemini-powered-coding-agent-for-designing-advanced-algorithms/">[11: AlphaEvolve]</a></p>
+    <h3 className="quadrant-discussion-title"><QuadrantTracker quadrant="C" /><span>C: Require evidence before accepting or sharing an output</span></h3>
+    <p>A familiar interview guide or review template can make generation easy while concealing weak substance. AI can help organize observations, identify questions and draft feedback. The author still needs to check whether claims are accurate, supported and appropriate to the person and situation, and edit for audience clarity where needed. Fluent text is insufficient evidence that a review has actually been performed.</p>
     <p>A field experiment with PSG Global Solutions, conducted in 2025 and described in Jabarian and Henkel’s September 2026 working paper, randomized 67,056 eligible applications across AI interviews, human interviews and a choice condition. The setting was entry-level customer-service recruitment. Both interview modes used the same guidelines; human recruiters made every hiring decision. <a className="source-link" href="https://luca-henkel.github.io/papers/InterviewAI.pdf">[10: Field experiment]</a></p>
     <p>The offer rate was 9.73% after AI interviews versus 8.70% after human interviews: <strong>1.03 percentage points, or about 12% higher</strong>. Job starts and employment lasting at least one month also increased among assigned applicants. The researchers interpreted the pattern as more consistent, adaptive information collection.</p>
-    <p>We place this workflow in quadrant C because running an interview is structured while assessing the information and the applicant still requires judgment. The study measured downstream outcomes; our placement does not imply that hiring quality is unmeasurable. Nor does the result establish the same benefit for specialist-expert selection.</p>
+    <p>We place this workflow in C because the interview follows a known process while assessing the applicant requires judgment. Downstream outcomes remain measurable. The case shows a useful division of work within C; it does not establish the same benefit for specialist-expert selection.</p>
+    <h3 className="quadrant-discussion-title"><QuadrantTracker quadrant="D" /><span>D: Develop approaches and alternatives before committing</span></h3>
+    <p>When both the method and the quality assessment are unsettled, use AI to frame the problem, surface assumptions, propose methodologies, compare alternatives and design initial tests. For a new expert-onboarding process, that might mean three operating models, their trade-offs and a small pilot plan. A polished policy ready for rollout would require much more validation.</p>
+    <p>Treat these outputs as working hypotheses. They can be shared explicitly for exploration, with a clear question and unresolved assumptions. Validate them through domain judgment, stakeholder input or a bounded pilot before adopting them. As criteria become clearer, some steps may move into B for measurable experimentation and later A for repeatable operation.</p>
   </div>
 </section>
 
@@ -232,9 +241,10 @@ featured: false
     <li id="ref-4">Kate Niederhoffer, Gabriella Rosen Kellerman, Angela Lee, Alex Liebscher, Kristina Rapuano and Jeffrey T. Hancock. <a href="https://hbr.org/2025/09/ai-generated-workslop-is-destroying-productivity">AI-Generated “Workslop” Is Destroying Productivity.</a> Harvard Business Review, September 22, 2025; updated September 25.</li>
     <li id="ref-5">BetterUp Labs and Stanford Social Media Lab. <a href="https://www.betterup.com/workslop">Workslop: The Hidden Cost of AI-Generated Busywork.</a> Public summary of the September 2025 survey of 1,150 U.S. desk workers.</li>
     <li id="ref-6">Kate Niederhoffer, Alexi Robichaux and Jeffrey T. Hancock. <a href="https://hbr.org/2026/01/why-people-create-ai-workslop-and-how-to-stop-it">Why People Create AI “Workslop”—and How to Stop It.</a> Harvard Business Review, January 16, 2026. <a href="https://mediapool.hm.edu/media/fk10/fk10_lokal/relaunch_3/masterstudiengaenge_1/hrm/eignungspruefung/why-people-create-ai-workslop-and-how-to-stop-it-EBSCO-FullText-01_30_2026.pdf">Publicly available full-text PDF</a>; trust passage on p. 7.</li>
-    <li id="ref-7">Aruna Ranganathan and Xingqi Maggie Ye. <a href="https://hbr.org/2026/02/ai-doesnt-reduce-work-it-intensifies-it">AI Doesn’t Reduce Work—It Intensifies It.</a> Harvard Business Review, February 9, 2026.</li>
-    <li id="ref-8">Laura Counts. <a href="https://newsroom.haas.berkeley.edu/ai-promised-to-free-up-workers-time-uc-berkeley-haas-researchers-found-the-opposite/">AI promised to free up workers’ time. UC Berkeley Haas researchers found the opposite.</a> UC Berkeley Haas, February 18, 2026. Interview with Xingqi Maggie Ye; observation dates are not specified.</li>
+    <li id="ref-7">Aruna Ranganathan and Xingqi Maggie Ye. <a href="https://hbr.org/2026/02/ai-doesnt-reduce-work-it-intensifies-it">AI Doesn’t Reduce Work—It Intensifies It.</a> Harvard Business Review, February 9, 2026. <a href="https://www.physicianleaders.org/pages/articles/ai-doesnt-reduce-work-it-intensifies-it">Authorized full-text reprint</a>, American Association for Physician Leadership, March 3, 2026. Observations conducted April–December 2025.</li>
+    <li id="ref-8">Laura Counts. <a href="https://newsroom.haas.berkeley.edu/ai-promised-to-free-up-workers-time-uc-berkeley-haas-researchers-found-the-opposite/">AI promised to free up workers’ time. UC Berkeley Haas researchers found the opposite.</a> UC Berkeley Haas, February 18, 2026. Interview with Xingqi Maggie Ye.</li>
     <li id="ref-9">Alistair Gray. <a href="https://stripe.dev/blog/minions-stripes-one-shot-end-to-end-coding-agents">Minions: Stripe’s one-shot, end-to-end coding agents.</a> Stripe, February 9, 2026.</li>
     <li id="ref-10">Brian Jabarian and Luca Henkel. <a href="https://luca-henkel.github.io/papers/InterviewAI.pdf">Voice AI in Firms: A Natural Field Experiment on Automated Job Interviews.</a> Working-paper version dated September 10, 2026. Experiment conducted March–June 2025. <a href="https://arxiv.org/abs/2607.28222v2">Archived arXiv v2</a>.</li>
+    <li id="ref-11">AlphaEvolve team. <a href="https://deepmind.google/blog/alphaevolve-a-gemini-powered-coding-agent-for-designing-advanced-algorithms/">AlphaEvolve: A Gemini-powered coding agent for designing advanced algorithms.</a> Google DeepMind, May 14, 2025. Technical account from the system’s developer.</li>
   </ol>
 </section>
