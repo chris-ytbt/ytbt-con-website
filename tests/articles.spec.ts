@@ -37,7 +37,7 @@ test('Blog preserves the complete rich article without duplicate page chrome', a
   await expect(page.locator('.article-content')).not.toContainText('adapted from slide 20')
   await expect(page.getByRole('link', { name: 'Back to Blog' })).toHaveAttribute('href', '/blog')
   await expect(page.locator('main article a[href^="/portfolio/"]')).toHaveCount(0)
-  await page.locator('.article-content figure').screenshot({ path: testInfo.outputPath('blog-framework-desktop.png') })
+  await page.locator('.article-content figure').screenshot({ path: testInfo.outputPath('blog-framework-desktop.png'), style: 'body > header { visibility: hidden; }' })
 })
 
 test('Portfolio keeps its existing URLs, content, and section-specific navigation', async ({ page }) => {
@@ -93,5 +93,58 @@ test('Mobile navigation and article layouts remain usable at 390px', async ({ pa
   expect(await tableRegion.evaluate(element => element.scrollWidth > element.clientWidth)).toBeTruthy()
   expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)).toBeTruthy()
   await page.screenshot({ path: testInfo.outputPath('blog-article-mobile.png') })
-  await page.locator('.article-content figure').screenshot({ path: testInfo.outputPath('blog-framework-mobile.png') })
+  await page.locator('.article-content figure').screenshot({ path: testInfo.outputPath('blog-framework-mobile.png'), style: 'body > header { visibility: hidden; }' })
+})
+
+test('Framework axes stay between the correct quadrants and discussion icons locate A and C', async ({ page }, testInfo) => {
+  for (const width of [1280, 390]) {
+    await page.setViewportSize({ width, height: 900 })
+    await page.goto(`/blog/${blogSlug}`)
+    const figure = page.locator('.article-content figure')
+    const geometry = await figure.evaluate(element => {
+      const bounds = (selector: string) => {
+        const target = element.querySelector(selector)
+        if (!target) throw new Error(`Missing framework element: ${selector}`)
+        const { left, top, right, bottom, width, height } = target.getBoundingClientRect()
+        return { left, top, right, bottom, width, height }
+      }
+      return {
+        a: bounds('[aria-labelledby="quadrant-a"]'),
+        b: bounds('[aria-labelledby="quadrant-b"]'),
+        c: bounds('[aria-labelledby="quadrant-c"]'),
+        d: bounds('[aria-labelledby="quadrant-d"]'),
+        x: bounds('.framework-axis-x'),
+        y: bounds('.framework-axis-y'),
+      }
+    })
+    const { a, b, c, d, x, y } = geometry
+    expect(a.top).toBeCloseTo(c.top, 0)
+    expect(b.top).toBeCloseTo(d.top, 0)
+    expect(a.left).toBeCloseTo(b.left, 0)
+    expect(c.left).toBeCloseTo(d.left, 0)
+    expect(x.top).toBeGreaterThan(a.bottom)
+    expect(x.bottom).toBeLessThan(b.top)
+    expect(y.left).toBeGreaterThan(a.right)
+    expect(y.right).toBeLessThan(c.left)
+    expect(x.height).toBeGreaterThanOrEqual(2)
+    expect(y.width).toBeGreaterThanOrEqual(2)
+    const labels = figure.locator('.framework-y-label span')
+    await expect(labels).toHaveText(['Task execution: structured and known', 'Task execution: unstructured'])
+    for (const label of await labels.all()) {
+      const box = await label.boundingBox()
+      expect(box!.height).toBeGreaterThan(box!.width * 3)
+      expect(box!.x + box!.width).toBeLessThan(a.left)
+    }
+    await expect(figure).not.toContainText('Yottabyte framework. Rows move')
+    for (const [quadrant, expectedX] of [['A', '2'], ['C', '13']]) {
+      const heading = page.getByRole('heading', { name: new RegExp(`^Quadrant ${quadrant} in practice:`) })
+      const highlighted = heading.locator('svg rect[fill="#1e40af"]')
+      await expect(heading.locator('svg rect')).toHaveCount(4)
+      await expect(highlighted).toHaveCount(1)
+      await expect(highlighted).toHaveAttribute('x', expectedX)
+      await expect(highlighted).toHaveAttribute('y', '2')
+    }
+    expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)).toBeTruthy()
+    await page.locator('.quadrant-discussion-title').first().screenshot({ path: testInfo.outputPath(`quadrant-tracker-${width}.png`), style: 'body > header { visibility: hidden; }' })
+  }
 })

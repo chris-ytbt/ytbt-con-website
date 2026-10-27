@@ -7,6 +7,7 @@ import { getArticleBySlug, getArticles } from '@/lib/markdown'
 import { ArticleType } from '@/lib/types'
 import { articleSections } from '@/lib/article-sections'
 import Button from '@/components/ui/Button'
+import QuadrantTracker from './QuadrantTracker'
 
 export function getArticleMetadata(slug: string, type: ArticleType): Metadata {
   const article = getArticleBySlug(slug, type)
@@ -68,7 +69,7 @@ export default function ArticleDetail({ slug, type }: { slug: string; type: Arti
           )}
         </header>
         <div className="article-content prose prose-lg prose-gray max-w-none prose-headings:text-gray-900 prose-headings:font-bold prose-p:text-gray-600 prose-p:leading-relaxed prose-strong:text-gray-900 prose-ul:text-gray-600 prose-li:text-gray-600">
-          <MDXRemote source={article.content} />
+          <MDXRemote source={article.content} components={{ QuadrantTracker }} />
         </div>
         {adjacent.some(item => item.article) && (
           <nav aria-label={`${section.name} article navigation`} className="mt-16 pt-8 border-t border-gray-200">

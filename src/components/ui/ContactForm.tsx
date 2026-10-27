@@ -29,7 +29,7 @@ export default function ContactForm() {
       if (response.ok) {
         setSubmitMessage({
           type: 'success',
-          message: 'Thank you for your message! We\'ll get back to you within 24 hours.'
+          message: 'Thank you for your message! We\'ll get back to you soon.'
         })
         reset()
       } else {
@@ -84,7 +84,7 @@ export default function ContactForm() {
             }
           })}
           className="block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-navy-500 focus:border-navy-500"
-          placeholder="your.email@company.com"
+          placeholder="Your email address"
         />
         {errors.email && (
           <p className="mt-1 text-sm text-red-600">{errors.email.message}</p>

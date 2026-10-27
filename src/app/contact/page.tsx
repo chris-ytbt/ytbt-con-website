@@ -1,4 +1,4 @@
-import {Mail, Phone, MapPin, Clock} from 'lucide-react'
+import {Mail} from 'lucide-react'
 import ContactForm from '@/components/ui/ContactForm'
 import {Metadata} from 'next'
 
@@ -38,8 +38,7 @@ export default function ContactPage() {
 									</div>
 									<div className="ml-4">
 										<h3 className="text-lg font-semibold text-gray-900">Email</h3>
-										<p className="text-gray-600">hello@ytbt.io</p>
-										<p className="text-sm text-gray-500">We&apos;ll respond within 24 hours</p>
+										<a href="mailto:hello@ytbt.net" className="text-gray-600 hover:text-navy-600 hover:underline">hello@ytbt.net</a>
 									</div>
 								</div>
 
@@ -68,21 +67,6 @@ export default function ContactPage() {
 								{/*    <h3 className="text-lg font-semibold text-gray-900">Office</h3>*/}
 								{/*    <p className="text-gray-600">Singapore</p>*/}
 								{/*    <p className="text-sm text-gray-500">Available for in-person meetings</p>*/}
-								{/*  </div>*/}
-								{/*</div>*/}
-
-								{/*RESPONSE TIME: TODO*/}
-								{/*  <div className="flex items-start">*/}
-								{/*    <div className="flex-shrink-0">*/}
-								{/*      <div className="flex items-center justify-center w-12 h-12 bg-navy-100 rounded-lg">*/}
-								{/*        <Clock className="w-6 h-6 text-navy-600" />*/}
-								{/*      </div>*/}
-								{/*    </div>*/}
-								{/*    <div className="ml-4">*/}
-								{/*      <h3 className="text-lg font-semibold text-gray-900">Response Time</h3>*/}
-								{/*      <p className="text-gray-600">Within 24 hours</p>*/}
-								{/*      <p className="text-sm text-gray-500">Typically much faster during business hours</p>*/}
-								{/*    </div>*/}
 								{/*  </div>*/}
 								{/*</div>*/}
 

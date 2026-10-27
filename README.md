@@ -25,6 +25,9 @@ renders these. Only commit trusted, reviewed MDX. The renderer uses
 `next-mdx-remote` 6 with its default JavaScript-expression blocking enabled;
 use static markup rather than executable expressions in article content.
 
+Use `<QuadrantTracker quadrant="A" />` in an MDX heading to add a small 2×2 location
+icon. A/B are the upper/lower left cells, and C/D are the upper/lower right cells.
+
 The `type` selects `/blog/<slug>` or `/portfolio/<slug>`. Lists are sorted by
 publication date, newest first, and previous/next links stay within that section.
 Cards show the category and publication date without repeating topic tags. Topic

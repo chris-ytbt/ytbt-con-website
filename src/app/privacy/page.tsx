@@ -99,7 +99,7 @@ export default function PrivacyPolicyPage() {
           </p>
           <div className="bg-gray-50 p-6 rounded-lg mb-8">
             <p className="text-gray-600 mb-2"><strong>Yottabyte Pte. Ltd.</strong></p>
-            <p className="text-gray-600 mb-2">Email: support@ytbt.io</p>
+            <p className="text-gray-600 mb-2">Email: <a href="mailto:support@ytbt.net" className="hover:text-navy-600 hover:underline">support@ytbt.net</a></p>
             <p className="text-gray-600">Address: 111 Somerset, #06-01Y, Singapore 238164</p>
           </div>
 

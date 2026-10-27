@@ -78,11 +78,20 @@ featured: false
 
   <figure className="my-8 rounded-lg border border-slate-200 bg-white p-5 sm:p-8" aria-labelledby="matrix-title">
     <figcaption id="matrix-title" className="mb-6 text-lg font-semibold text-slate-950">AI adoption framework</figcaption>
-    <div className="mb-3 hidden grid-cols-2 gap-4 sm:grid">
+    <div className="framework-scroll" role="region" aria-label="AI adoption framework; scroll horizontally on small screens" tabIndex="0">
+    <div className="framework-chart">
+    <div className="framework-column-labels">
       <p className="text-center text-sm font-semibold text-navy-600">Output quality: easy to measure</p>
       <p className="text-center text-sm font-semibold text-slate-600">Output quality: hard to measure</p>
     </div>
-    <div className="grid gap-4 sm:grid-cols-2">
+    <div className="framework-body">
+      <div className="framework-y-labels">
+        <div className="framework-y-label"><span>Task execution: structured and known</span></div>
+        <div className="framework-y-label"><span>Task execution: unstructured</span></div>
+      </div>
+    <div className="framework-quadrants">
+      <span className="framework-axis framework-axis-x" aria-hidden="true" />
+      <span className="framework-axis framework-axis-y" aria-hidden="true" />
       <section className="quadrant bg-blue-50/70" aria-labelledby="quadrant-a">
         <p className="quadrant-axis">More structured · Easy to measure</p>
         <h3 id="quadrant-a"><span className="quadrant-letter">A</span> Automate reliably</h3>
@@ -112,18 +121,21 @@ featured: false
         <p className="quadrant-action">Keep scope small; retain contextual judgment.</p>
       </section>
     </div>
-    <p className="mt-5 text-xs leading-relaxed text-slate-500">Yottabyte framework. Rows move from more to less structured execution. The framework and case placements are practical interpretations, not a validated predictive model.</p>
+    </div>
+    </div>
+    </div>
+    <p className="framework-scroll-hint">Scroll horizontally to view the full framework.</p>
   </figure>
 
   <div className="article-section">
     <p>Use the framework for a specific workflow or step. A single job may span several quadrants. Generating a candidate-screening summary, judging the evidence and making a hiring decision can require different controls.</p>
     <p>Novelty alone does not make AI unsuitable. A new forecasting approach can be tested against held-out data, making it a good candidate for quadrant B. Conversely, a recurring performance review can remain hard to evaluate despite a familiar template. Repetition does not remove the need for judgment.</p>
 
-    <h3>Quadrant A in practice: Stripe Minions</h3>
+    <h3 className="quadrant-discussion-title"><QuadrantTracker quadrant="A" /><span>Quadrant A in practice: Stripe Minions</span></h3>
     <p>In February 2026, Stripe reported more than 1,000 merged pull requests per week whose code was entirely produced by its Minions agents, with human review. The workflow connects Slack requests to repository context, isolated development environments, automated linting and tests, and reviewable pull requests. Stripe also caps the automated CI loop at two rounds. <a className="source-link" href="https://stripe.dev/blog/minions-stripes-one-shot-end-to-end-coding-agents">[9: Stripe engineering report]</a></p>
     <p>This is a company-reported operating result, not a causal estimate of organization-wide productivity. Its useful design feature is concrete: context and checks are part of the workflow, and iteration has a limit. That is why we place this use in quadrant A.</p>
 
-    <h3>Quadrant C in practice: AI interviews, human hiring decisions</h3>
+    <h3 className="quadrant-discussion-title"><QuadrantTracker quadrant="C" /><span>Quadrant C in practice: AI interviews, human hiring decisions</span></h3>
     <p>A field experiment with PSG Global Solutions, conducted in 2025 and described in Jabarian and Henkel’s September 2026 working paper, randomized 67,056 eligible applications across AI interviews, human interviews and a choice condition. The setting was entry-level customer-service recruitment. Both interview modes used the same guidelines; human recruiters made every hiring decision. <a className="source-link" href="https://luca-henkel.github.io/papers/InterviewAI.pdf">[10: Field experiment]</a></p>
     <p>The offer rate was 9.73% after AI interviews versus 8.70% after human interviews: <strong>1.03 percentage points, or about 12% higher</strong>. Job starts and employment lasting at least one month also increased among assigned applicants. The researchers interpreted the pattern as more consistent, adaptive information collection.</p>
     <p>We place this workflow in quadrant C because running an interview is structured while assessing the information and the applicant still requires judgment. The study measured downstream outcomes; our placement does not imply that hiring quality is unmeasurable. Nor does the result establish the same benefit for specialist-expert selection.</p>
