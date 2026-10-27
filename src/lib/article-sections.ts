@@ -14,7 +14,7 @@ export const articleSections = {
   },
   blog: {
     name: 'Blog',
-    title: 'Our Blog',
+    title: 'Blog',
     subtitle: 'Perspectives on organization, process, and technology to help teams turn ideas into lasting improvements.',
     description: 'Articles on organization, business processes, and technology from Yottabyte.',
     heading: 'Articles',

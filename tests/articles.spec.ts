@@ -7,7 +7,7 @@ const portfolioSlug = 'content-pipeline-management'
 
 test('Blog is between Portfolio and About, with the requested card metadata', async ({ page }, testInfo) => {
   await page.goto('/blog')
-  await expect(page.getByRole('heading', { level: 1 })).toHaveText('Our Blog')
+  await expect(page.getByRole('heading', { level: 1 })).toHaveText('Blog')
   await expect(page.locator('header nav a:visible')).toHaveText([
     'Yottabyte', 'Home', 'Portfolio', 'Blog', 'About', 'Contact',
   ])
