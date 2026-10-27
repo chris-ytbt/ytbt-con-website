@@ -1,9 +1,9 @@
 import { MetadataRoute } from 'next'
-import { getAllPosts } from '@/lib/markdown'
+import { getArticles } from '@/lib/markdown'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://yottabyte.com'
-  const posts = getAllPosts()
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.ytbt.net'
+  const posts = getArticles()
 
   // Static pages
   const staticPages = [
@@ -26,6 +26,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.9,
     },
     {
+      url: `${baseUrl}/blog`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly' as const,
+      priority: 0.8,
+    },
+    {
       url: `${baseUrl}/contact`,
       lastModified: new Date(),
       changeFrequency: 'monthly' as const,
@@ -39,13 +45,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
   ]
 
-  // Dynamic portfolio pages
-  const portfolioPages = posts.map((post) => ({
-    url: `${baseUrl}/portfolio/${post.slug}`,
-    lastModified: new Date(post.date),
+  // Both article types share the same content store and sitemap generation.
+  const articlePages = posts.map((post) => ({
+    url: `${baseUrl}/${post.type}/${post.slug}`,
+    lastModified: new Date(`${post.date}T00:00:00Z`),
     changeFrequency: 'monthly' as const,
     priority: 0.8,
   }))
 
-  return [...staticPages, ...portfolioPages]
+  return [...staticPages, ...articlePages]
 }

@@ -36,7 +36,13 @@ export default function Footer() {
                   Portfolio
                 </Link>
                 <Link 
-                  href="/contact" 
+                  href="/blog"
+                  className="block text-gray-300 hover:text-white transition-colors"
+                >
+                  Blog
+                </Link>
+                <Link
+                  href="/contact"
                   className="block text-gray-300 hover:text-white transition-colors"
                 >
                   Contact

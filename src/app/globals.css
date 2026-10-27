@@ -31,3 +31,107 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background: #94a3b8;
 }
+
+/* Rich article blocks share the site's typography and stay within narrow screens. */
+.article-content {
+  overflow-wrap: anywhere;
+}
+
+.article-content [id] {
+  scroll-margin-top: 7rem;
+}
+
+.article-content blockquote p::before,
+.article-content blockquote p::after {
+  content: none;
+}
+
+.article-content blockquote footer {
+  margin-top: 0.75rem;
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 400;
+  color: #64748b;
+}
+
+.article-content .evidence-note {
+  border-left: 2px solid #cbd5e1;
+  padding-left: 1rem;
+  font-size: 0.95rem;
+}
+
+.article-content .quadrant {
+  min-width: 0;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.5rem;
+  padding: 1.25rem;
+}
+
+.article-content .quadrant h3 {
+  margin: 0.75rem 0;
+  font-size: 1.125rem;
+}
+
+.article-content .quadrant p {
+  margin: 0.75rem 0;
+  font-size: 0.875rem;
+  line-height: 1.6;
+}
+
+.article-content .quadrant .quadrant-axis {
+  margin-top: 0;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #64748b;
+}
+
+.article-content .quadrant-letter {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.75rem;
+  height: 1.75rem;
+  margin-right: 0.25rem;
+  border-radius: 0.25rem;
+  background: #1e3a8a;
+  color: white;
+  font-size: 0.875rem;
+}
+
+.article-content .quadrant .quadrant-example {
+  border-top: 1px solid #e2e8f0;
+  padding-top: 0.75rem;
+}
+
+.article-content .quadrant .quadrant-action {
+  margin-bottom: 0;
+  font-weight: 600;
+  color: #1e40af;
+}
+
+.article-content .response-table {
+  margin: 0;
+  font-size: 0.875rem;
+}
+
+.article-content .response-table th,
+.article-content .response-table td {
+  padding: 1rem;
+  border-bottom: 1px solid #e2e8f0;
+  vertical-align: top;
+  line-height: 1.6;
+}
+
+.article-content .response-table thead {
+  background: #f8fafc;
+}
+
+.article-content .response-table tbody th {
+  width: 19%;
+  color: #1e40af;
+  font-size: 0.75rem;
+}
+
+.article-content .response-table tr:last-child > * {
+  border-bottom: 0;
+}

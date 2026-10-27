@@ -1,4 +1,5 @@
 ---
+type: portfolio
 title: "Business Development Automation for Tech Enterprise"
 date: "2025-03-01"
 category: "Process Automation"

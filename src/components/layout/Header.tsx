@@ -8,6 +8,7 @@ import { cn } from '@/lib/utils'
 const navigation = [
   { name: 'Home', href: '/' },
   { name: 'Portfolio', href: '/portfolio' },
+  { name: 'Blog', href: '/blog' },
   { name: 'About', href: '/about' },
   { name: 'Contact', href: '/contact' },
 ]
@@ -47,6 +48,7 @@ export default function Header() {
               className="text-gray-700 hover:text-navy-500"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               aria-label="Toggle mobile menu"
+              aria-expanded={mobileMenuOpen}
             >
               {mobileMenuOpen ? (
                 <X className="h-6 w-6" />
@@ -59,6 +61,7 @@ export default function Header() {
 
         {/* Mobile navigation */}
         <div
+          inert={!mobileMenuOpen}
           className={cn(
             "md:hidden transition-all duration-200 ease-in-out",
             mobileMenuOpen 

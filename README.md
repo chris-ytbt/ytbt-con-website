@@ -1,4 +1,46 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+Yottabyte's Next.js website with Portfolio case studies and Blog articles.
+
+## Publishing articles
+
+Both sections use the same Markdown/MDX format and the same `Article` model, loader,
+cards, listing, and detail components. All content lives in `src/content/articles/`.
+Create a file named with a unique lowercase, hyphenated slug, for example
+`improving-team-workflows.md`:
+
+```yaml
+---
+type: blog # blog or portfolio
+title: "Improving Team Workflows"
+date: "2026-10-27" # quoted YYYY-MM-DD publication date
+category: "Organization & Process"
+tags: ["process design", "teamwork"]
+excerpt: "A short summary used on cards and in page metadata."
+featured: false
+---
+```
+
+Write the article body below the frontmatter using Markdown or static MDX markup.
+Do not include a page header, title, navigation, or site footer; the shared template
+renders these. Only commit trusted, reviewed MDX, since MDX can execute code.
+
+The `type` selects `/blog/<slug>` or `/portfolio/<slug>`. Lists are sorted by
+publication date, newest first, and previous/next links stay within that section.
+Cards show the category and publication date without repeating topic tags. Topic
+tags remain available on detail pages. Both sections are included in the sitemap.
+Publishing is immediate on deployment; `date` is a display/sort value, not a scheduler.
+
+Run `npm run build` before committing. Pushing to the Vercel production branch
+triggers a new deployment when the Git integration is enabled. Set
+`DISCORD_WEBHOOK_URL` in Vercel for contact notifications and `NEXT_PUBLIC_SITE_URL`
+to the production origin for sitemap URLs.
+
+## Regression checks
+
+After `npm run build`, start the production server with `npm start`. In another
+terminal, run `npx playwright test --project="Microsoft Edge" --workers=1`.
+Set `PLAYWRIGHT_BASE_URL` if the server uses a different origin or port. The tests
+cover desktop/mobile navigation, article content, section isolation, existing
+Portfolio URLs, and sitemap entries. They never submit the contact form.
 
 ## Getting Started
 

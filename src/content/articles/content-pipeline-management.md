@@ -1,4 +1,5 @@
 ---
+type: portfolio
 title: "Content Pipeline Management for Game Studio"
 date: "2025-06-01"
 category: "Process Automation"

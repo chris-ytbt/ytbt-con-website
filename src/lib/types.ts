@@ -1,4 +1,7 @@
-export interface PortfolioPost {
+export type ArticleType = 'portfolio' | 'blog'
+
+export interface Article {
+  type: ArticleType
   slug: string
   title: string
   date: string
