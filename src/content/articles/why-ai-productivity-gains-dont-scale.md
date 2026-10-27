@@ -1,7 +1,7 @@
 ---
 type: "blog"
 title: "Why AI Productivity Gains Don’t Scale"
-date: "2026-10-27"
+date: "2026-10-25"
 category: "Organization & Process"
 tags: ["AI adoption", "organizational productivity", "process design"]
 excerpt: "Processes and culture that help teams avoid the illusion of speed, workslop and unsustainable work intensity."
